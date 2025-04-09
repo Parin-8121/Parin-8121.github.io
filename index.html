@@ -23,8 +23,15 @@
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><button id="theme-toggle-btn" class="theme-icon-btn" aria-label="Toggle Theme">
+              <img id="theme-icon" src="assets/icons/dark.png" alt="Toggle Theme" />
+              <span id="theme-label">Dark Mode</span>
+            </button>
+            </li>
           </ul>
         </div>
+        
+        
       </div>
     </nav>
     
@@ -231,7 +238,7 @@
       <!-- Foreground Hero Content -->
       <div class="container text-center py-5 position-relative" style="z-index: 2;">
         <img src="assets/images/techy.png" alt="Parin Cartoon" class="cartoon-img mb-3">
-        <h1 class="display-5 fw-bold">Hi, I'm Parin Patel</h1>
+        <h1 class="display-5 fw-bold"><span class="title">Hi, I'm Parin Patel</span></h1>
         <p class="lead">Frontend Developer & Web Enthusiast</p>
       </div>
     </section>
@@ -274,19 +281,6 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="assets/images/project1.png" alt="Project 1">
-          <h3>Restaurants Website</h3>
-          <p>Responsive website for a modern Indian dining experience.</p>
-          <a href="https://parin-8121.github.io/spice_express/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/spice_express.git" target="_blank">GitHub</a>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </section>
 
     <!-- Skills -->
     <section id="skills">
@@ -297,7 +291,7 @@
         <div class="skill"><img src="assets/images/skills/js.png" alt="JavaScript"><p>JavaScript</p></div>
         <div class="skill"><img src="assets/images/skills/java.png" alt="Java"><p>Java</p></div>
         <div class="skill"><img src="assets/images/skills/git.png" alt="Git"><p>Git</p></div>
-        <div class="skill"><img src="assets/images/skills/vscode.png" alt="VS Code"><p>VS Code</p></div>
+        <div class="skill"><img src="assets/images/skills/vs.png" alt="VS Code"><p>VS Code</p></div>
         <div class="skill"><img src="assets/images/skills/photoshop.svg" alt="Photoshop"><p>Photoshop</p></div>
         <div class="skill"><img src="assets/images/skills/illustrator.svg" alt="Illustrator"><p>Illustrator</p></div>
         <div class="skill"><img src="assets/images/skills/linux.png" alt="Linux"><p>Linux</p></div>
@@ -305,6 +299,30 @@
       </div>
     </section>
     
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="assets/images/project1.png" alt="Project 1">
+          <h3>Restaurants Website</h3>
+          <p>Responsive website for a modern Indian dining experience.</p>
+          <a href="https://parin-8121.github.io/spice_express/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/spice_express.git" target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/images/project2.png" alt="Project 1">
+          <h3>Restaurants Website</h3>
+          <p>Responsive website for a modern Indian dining experience.</p>
+          <a href="https://parin-8121.github.io/Eyewear_web/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/Eyewear_web.git" target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/images/project1.png" alt="Project 1">
+          <h3>Restaurants Website</h3>
+          <p>Responsive website for a modern Indian dining experience.</p>
+          <a href="https://parin-8121.github.io/spice_express/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/spice_express.git" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Resume -->
     <section id="resume">
@@ -315,20 +333,22 @@
     </section>
 
     <!-- Contact -->
-     
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="mailto:parinp117@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <form action="https://formspree.io/f/xanelvya" method="POST" id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
       <div class="contact-links">
-        <a href="mailto:parinp117@gmail.com">Email</a> |
+       
         <a href="https://github.com/Parin-8121" target="_blank">GitHub</a> |
         <a href="https://www.linkedin.com/in/parinpatel117" target="_blank">LinkedIn</a>
       </div>
+      <div id="form-response" class="hidden">Thank you! Message sent.</div>
     </section>
 
   </main>
