@@ -83,30 +83,26 @@
   </div>
 
   <script>
-    function validateEmail() {
-      const email = document.getElementById("email").value;
-      const error = document.getElementById("error-msg");
-      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+   function validateEmail() {
+  const email = document.getElementById("email").value;
+  const error = document.getElementById("error-msg");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!emailPattern.test(email)) {
-        error.textContent = "Please enter a valid email address.";
-        return false;
-      }
+  if (!emailPattern.test(email)) {
+    error.textContent = "Please enter a valid email address.";
+    return false;
+  }
 
-      error.textContent = "";
-      
-      // ✅ OPTIONAL: Send email to Formspree (if form has action)
-      // ✅ You can also save it to localStorage or console:
-      console.log("Email captured:", email);
-      localStorage.setItem("visitorEmail", email);
+  error.textContent = "";
+  localStorage.setItem("visitorEmail", email);
 
-      // Redirect to actual portfolio
-      setTimeout(() => {
-        window.location.href = "main.html";
-      }, 500);
+  setTimeout(() => {
+    window.location.href = "main.html"; // or index.html if unchanged
+  }, 500);
 
-      return false; // prevent actual form submit
-    }
+  return false;
+}
+
   </script>
 
 </body>
