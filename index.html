@@ -2,363 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parin Patel | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome – Enter Email</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(120deg, #1d1d1d, #292929);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #111;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00e6b2;
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar shadow-sm">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><button id="theme-toggle-btn" class="theme-icon-btn" aria-label="Toggle Theme">
-              <img id="theme-icon" src="assets/images/icons/dark.png" alt="Toggle Theme" />
-              <span id="theme-label">Dark Mode</span>
-            </button>
-            </li>
-          </ul>
-        </div>
-        
-        
-      </div>
-    </nav>
+  <div class="login-container">
+    <h1>Welcome</h1>
+    <p>Please enter your email to continue</p>
     
-    <section id="hero" class="position-relative text-white overflow-hidden">
-      <!-- Flowing Code Background -->
-      <div class="code-bg-wrapper">
-        <div class="code-bg-content">
-          <pre>
-            <div class="code-bg">
-              public class NerdMode {
-                  public static void main(String[] args) {
-                      int caffeine = 1000;
-                      boolean alive = true;
-                      String[] stack = {"HTML", "CSS", "JS", "???", "profit"};
-              
-                      while(alive) {
-                          try {
-                              compile();
-                              debug();
-                              pushToGit();
-                              commitRandomly();
-                              if(Math.random() > 0.95) {
-                                  throw new BurnoutException();
-                              }
-                          } catch(Exception e) {
-                              crySilently();
-                              retry();
-                          }
-                      }
-                  }
-              
-                  static void compile() {
-                      System.out.println("Compiling...");
-                      int linesOfCode = (int)(Math.random() * 1337);
-                  }
-              
-                  static void debug() {
-                      boolean success = false;
-                      while(!success) {
-                          success = Math.random() > 0.9;
-                      }
-                  }
-              
-                  static void pushToGit() {
-                      System.out.println("git add .");
-                      System.out.println("git commit -m 'final-final-2'");
-                      System.out.println("git push origin main");
-                  }
-              
-                  static void commitRandomly() {
-                      int commits = (int)(Math.random() * 10);
-                      for(int i = 0; i < commits; i++) {
-                          System.out.println("Commit #" + i + ": Minor changes");
-                      }
-                  }
-              
-                  static void crySilently() {
-                      System.out.println("(╯°□°）╯︵ ┻━┻");
-                  }
-              
-                  static void retry() {
-                      System.out.println("Have you tried turning it off and on again?");
-                  }
-              }
-              
-              class BurnoutException extends Exception {
-                  BurnoutException() {
-                      super("Too much code, not enough snacks.");
-                  }
-              }
-              
-              // Bonus Methods
-              void drinkCoffee() {
-                  System.out.println("Sipping ☕... more power!");
-              }
-              
-              void stackOverflowScroll() {
-                  System.out.println("Searching...");
-                  for (int i = 0; i < 5; i++) {
-                      System.out.println("Maybe this thread will help?");
-                  }
-              }
-              
-              void endlessLoop() {
-                  while(true) {
-                      System.out.println("Oops...");
-                  }
-              }
-              
-              void createBug() {
-                  System.out.println("Introducing a new feature... aka a bug.");
-              }
-              
-              void meetDeadline() {
-                  System.out.println("Rushing like it's a hackathon.");
-              }
-              
-              void pretendToWork() {
-                  System.out.println("npm install && alt-tab");
-              }
-              </div>
-              
-    
-          </pre>
-          <pre>
-            <div class="code-bg">
-              public class NerdMode {
-                  public static void main(String[] args) {
-                      int caffeine = 1000;
-                      boolean alive = true;
-                      String[] stack = {"HTML", "CSS", "JS", "???", "profit"};
-              
-                      while(alive) {
-                          try {
-                              compile();
-                              debug();
-                              pushToGit();
-                              commitRandomly();
-                              if(Math.random() > 0.95) {
-                                  throw new BurnoutException();
-                              }
-                          } catch(Exception e) {
-                              crySilently();
-                              retry();
-                          }
-                      }
-                  }
-              
-                  static void compile() {
-                      System.out.println("Compiling...");
-                      int linesOfCode = (int)(Math.random() * 1337);
-                  }
-              
-                  static void debug() {
-                      boolean success = false;
-                      while(!success) {
-                          success = Math.random() > 0.9;
-                      }
-                  }
-              
-                  static void pushToGit() {
-                      System.out.println("git add .");
-                      System.out.println("git commit -m 'final-final-2'");
-                      System.out.println("git push origin main");
-                  }
-              
-                  static void commitRandomly() {
-                      int commits = (int)(Math.random() * 10);
-                      for(int i = 0; i < commits; i++) {
-                          System.out.println("Commit #" + i + ": Minor changes");
-                      }
-                  }
-              
-                  static void crySilently() {
-                      System.out.println("(╯°□°）╯︵ ┻━┻");
-                  }
-              
-                  static void retry() {
-                      System.out.println("Have you tried turning it off and on again?");
-                  }
-              }
-              
-              class BurnoutException extends Exception {
-                  BurnoutException() {
-                      super("Too much code, not enough snacks.");
-                  }
-              }
-              
-              // Bonus Methods
-              void drinkCoffee() {
-                  System.out.println("Sipping ☕... more power!");
-              }
-              
-              void stackOverflowScroll() {
-                  System.out.println("Searching...");
-                  for (int i = 0; i < 5; i++) {
-                      System.out.println("Maybe this thread will help?");
-                  }
-              }
-              
-              void endlessLoop() {
-                  while(true) {
-                      System.out.println("Oops...");
-                  }
-              }
-              
-              void createBug() {
-                  System.out.println("Introducing a new feature... aka a bug.");
-              }
-              
-              void meetDeadline() {
-                  System.out.println("Rushing like it's a hackathon.");
-              }
-              
-              void pretendToWork() {
-                  System.out.println("npm install && alt-tab");
-              }
-              </div>
-              
-          </pre>
-        </div>
-      </div>
-    
-      <!-- Foreground Hero Content -->
-      <div class="container text-center py-5 position-relative" style="z-index: 2;">
-        <img src="assets/images/techy.png" alt="Parin Cartoon" class="cartoon-img mb-3">
-        <h1 class="display-5 fw-bold"><span class="title">Hi, I'm Parin Patel</span></h1>
-        <p class="lead">Frontend Developer & Web Enthusiast</p>
-      </div>
-    </section>
-    
-    
+    <!-- Formspree version (optional) -->
+    <form action="https://formspree.io/f/xanelvya" method="POST" onsubmit="return validateEmail()"> 
    
-  </header>
-
-  <main>
-
-    <!-- About Me -->
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <p>
-          Hello! I’m Parin Patel, a passionate web development student currently
-          based in Canada.  I have
-          developed a strong interest in creating engaging and user-friendly
-          digital experiences. Currently, I am diving deep into the fundamentals
-          of web development, where I am honing my skills in HTML, CSS, and
-          JavaScript. My journey in web development has been fueled by a desire to
-          merge creativity with technical expertise. I believe that a
-          well-designed website is not only visually appealing but also functional
-          and intuitive. I enjoy tackling challenges, whether it's debugging code
-          or finding innovative solutions to design problems. Each project I
-          undertake allows me to learn and grow, and I am eager to apply my
-          knowledge in real-world scenarios.
-        </p>
-        <p>
-          In addition to my technical skills, I am committed to staying updated
-          with the latest industry trends and best practices. I am particularly
-          interested in responsive design, user experience (UX), and
-          accessibility, as I believe these elements are crucial in reaching a
-          wider audience. As I embark on my journey in web development, I am
-          excited about the prospect of collaborating on projects that push the
-          boundaries of design and functionality. Thank you for visiting my
-          portfolio, and I look forward to connecting with you to create impactful
-          digital solutions!
-        </p>
-      </div>
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill"><img src="assets/images/skills/html.png" alt="HTML"><p>HTML</p></div>
-        <div class="skill"><img src="assets/images/skills/css.png" alt="CSS"><p>CSS</p></div>
-        <div class="skill"><img src="assets/images/skills/js.png" alt="JavaScript"><p>JavaScript</p></div>
-        <div class="skill"><img src="assets/images/skills/java.png" alt="Java"><p>Java</p></div>
-        <div class="skill"><img src="assets/images/skills/git.png" alt="Git"><p>Git</p></div>
-        <div class="skill"><img src="assets/images/skills/vs.png" alt="VS Code"><p>VS Code</p></div>
-        <div class="skill"><img src="assets/images/skills/photoshop.svg" alt="Photoshop"><p>Photoshop</p></div>
-        <div class="skill"><img src="assets/images/skills/illustrator.svg" alt="Illustrator"><p>Illustrator</p></div>
-        <div class="skill"><img src="assets/images/skills/linux.png" alt="Linux"><p>Linux</p></div>
-        <div class="skill"><img src="assets/images/skills/ui.png" alt="UI Design"><p>UI Design</p></div>
-      </div>
-    </section>
     
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="assets/images/project1.png" alt="Project 1">
-          <h3>Restaurants Website</h3>
-          <p>Responsive website for a modern Indian dining experience.</p>
-          <a href="https://parin-8121.github.io/spice_express/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/spice_express.git" target="_blank">GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="assets/images/project2.png" alt="Project 1">
-          <h3>Eyewears Website</h3>
-          <p>Responsive website for a modern Eyewear collections and solutions.</p>
-          <a href="https://parin-8121.github.io/Eyewear_web/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/Eyewear_web.git" target="_blank">GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="assets/images/project3.png" alt="Project 1">
-          <h3>Grocery List</h3>
-          <p>Interactive grocery checklist with images, animations, and confetti celebration.</p>
-          <a href="https://parin-8121.github.io/grocery_list/" target="_blank">View Live</a> | <a href="https://github.com/Parin-8121/grocery_list.git" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </section>
+    <form onsubmit="return validateEmail()">
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Continue</button>
+      <div class="error" id="error-msg"></div>
+    </form>
+  </div>
 
-    <!-- Resume -->
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>You can download my resume or view it below.</p>
-      <a href="assets/resume/Parin_Patel_IT_Resume.pdf" class="btn" download>Download Resume</a>
-      <iframe src="assets/resume/Parin_Patel_IT_Resume.pdf" width="100%" height="500px"></iframe>
-    </section>
+  <script>
+    function validateEmail() {
+      const email = document.getElementById("email").value;
+      const error = document.getElementById("error-msg");
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <form action="https://formspree.io/f/xanelvya" method="POST" id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-      </div>
-      <div class="contact-links">
-       
-        <a href="https://github.com/Parin-8121" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/parinpatel117" target="_blank">LinkedIn</a>
-      </div>
-      <div id="form-response" class="hidden">Thank you! Message sent.</div>
-    </section>
+      if (!emailPattern.test(email)) {
+        error.textContent = "Please enter a valid email address.";
+        return false;
+      }
 
-  </main>
+      error.textContent = "";
+      
+      // ✅ OPTIONAL: Send email to Formspree (if form has action)
+      // ✅ You can also save it to localStorage or console:
+      console.log("Email captured:", email);
+      localStorage.setItem("visitorEmail", email);
 
-  <footer>
-    <p>&copy; 2024 Parin Patel. All rights reserved.</p>
-  </footer>
+      // Redirect to actual portfolio
+      setTimeout(() => {
+        window.location.href = "main.html";
+      }, 500);
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-<script src="js/app.js"></script>
+      return false; // prevent actual form submit
+    }
+  </script>
+
 </body>
 </html>
