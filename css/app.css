@@ -266,14 +266,11 @@ section h2 {
   padding: 80px 20px;
 }
 
-#resume iframe {
-  width: 100%;
-  max-width: 800px;
-  height: 80vh;
+
+embed {
   border: none;
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
-  margin: 20px auto;
-  display: block;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
