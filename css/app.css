@@ -261,10 +261,12 @@ section h2 {
 /* RESUME */
 #resume {
   text-align: center;
-  background: #121212;
-  color: #fff;
+  background: var(--card); 
+  color: var(--text); 
   padding: 80px 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 
 
 embed {
