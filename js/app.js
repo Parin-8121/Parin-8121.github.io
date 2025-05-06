@@ -183,3 +183,45 @@ lightbox.addEventListener('click', (e) => {
     lightbox.classList.add('hidden');
   }
 });
+
+const weatherBox = document.getElementById("weather-box");
+const apiKey = "034954345ef5e400cb9d8b8f20ee1f91"; // Replace with your OpenWeatherMap key
+
+function fetchWeather(lat, lon) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const temp = Math.round(data.main.temp);
+      const desc = data.weather[0].description;
+      const city = data.name;
+      const icon = data.weather[0].icon;
+      const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+      weatherBox.innerHTML = `
+        <h3>${city}</h3>
+        <img src="${iconURL}" alt="${desc}">
+        <p><strong>${temp}°C</strong> – ${desc}</p>
+      `;
+    })
+    .catch(() => {
+      weatherBox.innerHTML = `<p>Could not load weather data.</p>`;
+    });
+}
+
+// Geolocation
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    position => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      fetchWeather(lat, lon);
+    },
+    () => {
+      weatherBox.innerHTML = `<p>Location access denied.</p>`;
+    }
+  );
+} else {
+  weatherBox.innerHTML = `<p>Geolocation is not supported by your browser.</p>`;
+}
+

@@ -8,4 +8,5 @@
 | Footer                         | ✔️         | Styled, responsive, clean ✅                 |
 | Responsive (media queries)     | ✔️         | Mobile-optimized; theme toggle adapts ✅     |
 | **3+ JavaScript Features**     | ✔️         | Toggle, theme icons, animation ✅            |
-| Heavily Modified/Extra Feature | ✔️         | Theme switch + animated UI  |
+| Heavily Modified/Extra Feature | ✔️         | Theme switch + animated UI  | light box
+
