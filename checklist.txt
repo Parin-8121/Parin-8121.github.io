@@ -1,0 +1,11 @@
+| Requirement                    | Completed? | Notes                                       |
+| ------------------------------ | ---------- | ------------------------------------------- |
+| Header                         | ✔️         | Clean layout, animated background ✅         |
+| Navigation (mobile/desktop)    | ✔️         | Responsive navbar with icon toggle ✅        |
+| About/Company Profile          | ✔️         | “About Me” section styled and themed ✅      |
+| Products/Services              | ✔️         | Projects section with carousel and links ✅  |
+| Contact/Social                 | ✔️         | Contact form + social links ✅               |
+| Footer                         | ✔️         | Styled, responsive, clean ✅                 |
+| Responsive (media queries)     | ✔️         | Mobile-optimized; theme toggle adapts ✅     |
+| **3+ JavaScript Features**     | ✔️         | Toggle, theme icons, animation ✅            |
+| Heavily Modified/Extra Feature | ✔️         | Theme switch + animated UI  |
